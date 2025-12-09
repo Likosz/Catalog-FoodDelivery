@@ -11,7 +11,7 @@ export function HeroSection() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     if (postcode.trim()) {
-      console.log("Searching for:", postcode)
+      console.log("Buscando:", postcode)
     }
   }
 
@@ -22,28 +22,28 @@ export function HeroSection() {
           <div className="space-y-6 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm text-primary">
               <CheckCircle className="h-4 w-4" aria-hidden="true" />
-              <span>Order food easily from your favorite restaurants</span>
+              <span>Peça comida facilmente dos seus restaurantes favoritos</span>
             </div>
 
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Feast Your Senses,
+              Saboreie o Melhor,
               <br />
-              <span className="text-primary">Fast and Fresh</span>
+              <span className="text-primary">Rápido e Fresquinho</span>
             </h1>
 
             <p className="text-lg text-white/70 max-w-md mx-auto lg:mx-0">
-              Order Restaurant food, takeaway and groceries.
+              Peça comida de restaurantes, delivery e mercado.
             </p>
 
             <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto lg:mx-0">
               <div className="relative flex-1">
                 <Input
                   type="text"
-                  placeholder="e.g. EC4R 3TE"
+                  placeholder="Ex: 01310-100"
                   value={postcode}
                   onChange={(e) => setPostcode(e.target.value)}
                   className="h-14 pl-4 pr-4 rounded-full bg-white text-secondary border-0 placeholder:text-muted-foreground"
-                  aria-label="Enter your postcode"
+                  aria-label="Digite seu CEP"
                 />
               </div>
               <Button
@@ -52,12 +52,12 @@ export function HeroSection() {
                 className="h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white font-medium"
               >
                 <Search className="mr-2 h-5 w-5" aria-hidden="true" />
-                Search
+                Buscar
               </Button>
             </form>
 
             <p className="text-sm text-white/50">
-              Enter a postcode to see what we deliver
+              Digite seu CEP para ver o que entregamos na sua região
             </p>
           </div>
 
@@ -71,8 +71,8 @@ export function HeroSection() {
                     <CheckCircle className="h-5 w-5 text-green-600" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-semibold text-secondary text-sm">Order Accepted!</p>
-                    <p className="text-xs text-muted-foreground">Your order is confirmed</p>
+                    <p className="font-semibold text-secondary text-sm">Pedido Aceito!</p>
+                    <p className="text-xs text-muted-foreground">Seu pedido foi confirmado</p>
                   </div>
                 </div>
               </div>
@@ -83,8 +83,8 @@ export function HeroSection() {
                     <Truck className="h-5 w-5 text-primary" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="font-semibold text-secondary text-sm">Delivery in Progress</p>
-                    <p className="text-xs text-muted-foreground">Arriving in 20-25 min</p>
+                    <p className="font-semibold text-secondary text-sm">Entrega a Caminho</p>
+                    <p className="text-xs text-muted-foreground">Chega em 20-25 min</p>
                   </div>
                 </div>
                 <div className="flex gap-1 mt-3">
@@ -108,7 +108,7 @@ export function HeroSection() {
               <div className="absolute bottom-0 right-1/4 bg-white/10 backdrop-blur-sm rounded-2xl p-3">
                 <div className="flex items-center gap-2 text-white">
                   <Clock className="h-4 w-4" aria-hidden="true" />
-                  <span className="text-sm">24/7 Delivery</span>
+                  <span className="text-sm">Entrega 24h</span>
                 </div>
               </div>
             </div>

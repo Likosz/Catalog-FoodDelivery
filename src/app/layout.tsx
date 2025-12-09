@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Order.UK - Food Delivery",
-  description: "Order Restaurant food, takeaway and groceries. Feast Your Senses, Fast and Fresh.",
+  title: "Order.UK - Delivery de Comida",
+  description: "Peça comida de restaurantes, delivery e mercado. Saboreie o melhor, rápido e fresquinho.",
 }
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
         <main>{children}</main>

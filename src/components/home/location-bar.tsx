@@ -13,15 +13,15 @@ export function LocationBar() {
               <MapPin className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Delivering to</p>
-              <p className="font-medium text-foreground">Regent Street, A4, A4201, London</p>
+              <p className="text-xs text-muted-foreground">Entregando em</p>
+              <p className="font-medium text-foreground">Av. Paulista, 1000, São Paulo - SP</p>
             </div>
           </div>
           <Button
             variant="link"
             className="text-primary hover:text-primary/80 p-0 h-auto font-medium"
           >
-            Change Location
+            Alterar Local
           </Button>
         </div>
       </div>

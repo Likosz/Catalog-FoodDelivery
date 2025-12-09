@@ -7,8 +7,8 @@ export function PromoBanner() {
         <div className="flex items-center justify-center gap-2 text-center">
           <Sparkles className="h-4 w-4 text-yellow-400" aria-hidden="true" />
           <p className="text-sm text-white">
-            Get <span className="font-semibold text-primary">5% Off</span> your first order, Promo:{" "}
-            <span className="font-bold text-primary">ORDER5</span>
+            Ganhe <span className="font-semibold text-primary">5% OFF</span> no primeiro pedido, Cupom:{" "}
+            <span className="font-bold text-primary">PRIMEIRO5</span>
           </p>
           <Sparkles className="h-4 w-4 text-yellow-400" aria-hidden="true" />
         </div>

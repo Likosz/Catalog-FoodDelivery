@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Browse Menu", href: "/menu" },
-  { label: "Special Offers", href: "/offers" },
-  { label: "Restaurants", href: "/restaurants" },
-  { label: "Track Order", href: "/track" },
+  { label: "Início", href: "/" },
+  { label: "Cardápio", href: "/menu" },
+  { label: "Ofertas", href: "/offers" },
+  { label: "Restaurantes", href: "/restaurants" },
+  { label: "Rastrear Pedido", href: "/track" },
 ]
 
 export function Header() {
@@ -20,14 +20,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-secondary">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2" aria-label="Order.UK Home">
+        <Link href="/" className="flex items-center gap-2" aria-label="Order.UK Início">
           <div className="flex items-center">
             <span className="text-3xl font-bold text-primary">Order</span>
             <span className="text-3xl font-bold text-white">.UK</span>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" role="navigation" aria-label="Main navigation">
+        <nav className="hidden items-center gap-8 lg:flex" role="navigation" aria-label="Navegação principal">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -47,7 +47,7 @@ export function Header() {
           >
             <Link href="/login">
               <User className="mr-2 h-4 w-4" aria-hidden="true" />
-              Login/Signup
+              Entrar/Cadastrar
             </Link>
           </Button>
 
@@ -57,13 +57,13 @@ export function Header() {
                 variant="ghost"
                 size="icon"
                 className="text-white hover:bg-white/10 lg:hidden"
-                aria-label="Open menu"
+                aria-label="Abrir menu"
               >
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-secondary p-0">
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+              <SheetTitle className="sr-only">Menu de Navegação</SheetTitle>
               <div className="flex h-full flex-col">
                 <div className="flex items-center justify-between border-b border-white/10 p-4">
                   <span className="text-xl font-bold text-white">Menu</span>
@@ -72,12 +72,12 @@ export function Header() {
                     size="icon"
                     onClick={() => setIsOpen(false)}
                     className="text-white hover:bg-white/10"
-                    aria-label="Close menu"
+                    aria-label="Fechar menu"
                   >
                     <X className="h-5 w-5" />
                   </Button>
                 </div>
-                <nav className="flex flex-col gap-1 p-4" role="navigation" aria-label="Mobile navigation">
+                <nav className="flex flex-col gap-1 p-4" role="navigation" aria-label="Navegação mobile">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -96,7 +96,7 @@ export function Header() {
                   >
                     <Link href="/login" onClick={() => setIsOpen(false)}>
                       <User className="mr-2 h-4 w-4" aria-hidden="true" />
-                      Login/Signup
+                      Entrar/Cadastrar
                     </Link>
                   </Button>
                 </div>
